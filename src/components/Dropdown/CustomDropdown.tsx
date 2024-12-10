@@ -1,26 +1,31 @@
-import React, { FC, useState } from "react";
-import "./CustomDropdown.css";
+import React, { FC, useState } from 'react'
+import './CustomDropdown.css'
 
 export interface Option {
-  value: string | number;
-  label: string;
+  value: string | number
+  label: string
 }
 
 interface CustomDropdownProps {
-  label: string;
-  options: Option[];
-  value: string | number;
-  onChange: (value: string|number) => void;
+  label: string
+  options: Option[]
+  value: string | number
+  onChange: (value: string | number) => void
 }
 
-const CustomDropdown: FC<CustomDropdownProps> = ({ label, options, value, onChange }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
+const CustomDropdown: FC<CustomDropdownProps> = ({
+  label,
+  options,
+  value,
+  onChange,
+}) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleDropdown = () => setIsOpen(!isOpen)
 
-  const handleOptionClick = (optionValue: string|number) => {
-    onChange(optionValue);
-    setIsOpen(false); 
-  };
+  const handleOptionClick = (optionValue: string | number) => {
+    onChange(optionValue)
+    setIsOpen(false)
+  }
 
   return (
     <div className="custom-dropdown-container">
@@ -42,7 +47,7 @@ const CustomDropdown: FC<CustomDropdownProps> = ({ label, options, value, onChan
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default CustomDropdown;
+export default CustomDropdown

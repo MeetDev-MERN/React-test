@@ -10,12 +10,7 @@ const CustomInput: FC<CustomInputProps> = ({ label, value, ...props }) => {
   return (
     <div className="custom-input-container">
       <label className="input-label">{label}</label>
-      <input
-        type="text"
-        className="input-box"
-        value={value}
-        {...props} 
-      />
+      <input type="text" className="input-box" value={value} {...props} />
     </div>
   );
 };

@@ -8,6 +8,7 @@
   .filters-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     padding: 8px;
     gap: 20px;
@@ -31,7 +32,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    overflow-y: auto; /* Allows scrolling for the table body */
+    overflow-y: auto;
     margin-bottom: 16px;
   }
   
@@ -43,21 +44,25 @@
   .responsive-table thead th {
     position: sticky; /* Makes the header sticky */
     top: 0; /* Sticks the header at the top of the table body */
-    background-color: #f9f9f9; /* Background color for better visibility */
+    background-color: #514949; /* Background color for better visibility */
     z-index: 2; /* Ensures the header stays above the table rows */
-    border-bottom: 2px solid #ddd; /* Optional: Adds border for header */
+    border-bottom: 3px solid black; /* Optional: Adds border for header */
+    color: white; /* Text color for better visibility */
   }
   
-  .responsive-table th,
+.responsive-table tbody tr:nth-child(even){
+   background-color: #f2f2f2; /* Alternating row background color */
+ 
+
+}
+
+   .responsive-table th,
   .responsive-table td {
-    padding: 8px;
+    border-right: none;
+    padding: 15px;
     text-align: left;
-    border: 1px solid #ddd; /* Border for better readability */
-  }
+  } 
   
-  .responsive-table tbody tr:hover {
-    background-color: #f1f1f1; /* Optional: Highlight row on hover */
-  }
   
   .pagination-container {
     display: flex;
@@ -105,6 +110,8 @@
     height: 16px;
     width: 100%;
   }
+
+
   
   .filter-button {
     font-size: 16px;
@@ -114,7 +121,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 45px; /* Fixed height for consistency */
+    height: 32px; /* Fixed height for consistency */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +131,8 @@
     background-color: #4caf50; /* Green color for apply button */
     color: white;
   }
-  
+
+
   .reset-button {
     background-color: #f44336; /* Red color for reset button */
     color: white;
