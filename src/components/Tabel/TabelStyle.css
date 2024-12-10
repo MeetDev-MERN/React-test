@@ -1,0 +1,162 @@
+.table-responsive-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensures the main container takes full viewport height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8px;
+    gap: 20px;
+  }
+  
+  .filters-fields {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-label{
+    font-size: 14px;
+    color: white;
+  }
+  .filter-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling for the table body */
+    margin-bottom: 16px;
+  }
+  
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .responsive-table thead th {
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks the header at the top of the table body */
+    background-color: #f9f9f9; /* Background color for better visibility */
+    z-index: 2; /* Ensures the header stays above the table rows */
+    border-bottom: 2px solid #ddd; /* Optional: Adds border for header */
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd; /* Border for better readability */
+  }
+  
+  .responsive-table tbody tr:hover {
+    background-color: #f1f1f1; /* Optional: Highlight row on hover */
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .pagination-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .filter-actions {
+      width: 100%;
+      margin: 0 10px;
+      flex-direction: column;
+      gap: 6px; /* Reduce gap on very small screens */
+    }
+  
+    .pagination-container {
+      margin-top: 16px;
+    }
+  }
+  
+
+  .skeleton {
+    background-color: #ddd;
+    border-radius: 4px;
+    height: 16px;
+  }
+  
+  .skeleton-header {
+    height: 20px;
+  }
+  
+  .skeleton-cell {
+    height: 16px;
+    width: 100%;
+  }
+  
+  .filter-button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjust padding for desired button size */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 45px; /* Fixed height for consistency */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .apply-button {
+    background-color: #4caf50; /* Green color for apply button */
+    color: white;
+  }
+  
+  .reset-button {
+    background-color: #f44336; /* Red color for reset button */
+    color: white;
+  }
+  
+  .filter-button:hover {
+    opacity: 0.8;
+  }
+  
+  .filter-button:focus {
+    outline: none;
+  }
+  
+  .filter-button:active {
+    transform: scale(0.98); /* Slightly reduces button size on click */
+  }
+  
+
+  .error-state{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+
+  .no-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    margin-top: 16px;
+  }
